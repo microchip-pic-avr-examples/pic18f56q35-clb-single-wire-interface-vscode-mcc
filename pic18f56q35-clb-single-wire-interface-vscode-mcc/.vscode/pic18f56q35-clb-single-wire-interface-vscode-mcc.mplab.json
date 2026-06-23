@@ -1,0 +1,103 @@
+{
+    "version": "1.9",
+    "configurations": [
+        {
+            "name": "free",
+            "id": "conf1",
+            "device": "PIC18F56Q35",
+            "imagePath": "./out/pic18f56q35-clb-single-wire-interface-vscode-mcc/default.elf",
+            "packs": [
+                {
+                    "name": "PIC18F-Q_DFP",
+                    "vendor": "Microchip",
+                    "version": "1.30.487"
+                }
+            ],
+            "fileSet": "default",
+            "toolchain": "default-XC8"
+        },
+        {
+            "name": "pro",
+            "id": "conf1",
+            "device": "PIC18F56Q35",
+            "imageType": "application",
+            "imagePath": "./out/pic18f56q35-clb-single-wire-interface-vscode-mcc/pro.elf",
+            "packs": [
+                {
+                    "name": "PIC18F-Q_DFP",
+                    "vendor": "Microchip",
+                    "version": "1.30.487"
+                }
+            ],
+            "fileSet": "pro_files",
+            "toolchain": "pro_toolchain"
+        }
+    ],
+    "propertyGroups": [
+        {
+            "name": "default-XC8",
+            "type": "toolchain",
+            "provider": "microchip.toolchains:xc8@3.10",
+            "properties": {
+                "HI-TECH-COMP.optimization-level": "-O0"
+            }
+        },
+        {
+            "name": "pro_toolchain",
+            "type": "toolchain",
+            "provider": "microchip.toolchains:xc8@3.10",
+            "properties": {
+                "HI-TECH-COMP.optimization-level": "-Os"
+            }
+        }
+    ],
+    "fileSets": [
+        {
+            "name": "default",
+            "files": [
+                {
+                    "include": "**/*",
+                    "exclude": "**/@(build|_build|out|cmake|.vscode)/**/*"
+                },
+                "config.mcc/mcc_generated_files/pwm/src/pwm1_16bit.c",
+                "config.mcc/mcc_generated_files/system/src/mvio/vddio2.c",
+                "config.mcc/mcc_generated_files/system/src/clock.c",
+                "config.mcc/mcc_generated_files/system/src/interrupt.c",
+                "config.mcc/mcc_generated_files/uart/src/uart2.c",
+                "config.mcc/mcc_generated_files/crc/src/crc.c",
+                "config.mcc/mcc_generated_files/clb/src/clb1.c",
+                "config.mcc/mcc_generated_files/clb/src/clbBitstream.S",
+                "config.mcc/mcc_generated_files/system/src/system.c",
+                "config.mcc/mcc_generated_files/system/src/config_bits.c",
+                "config.mcc/main.c",
+                "config.mcc/mcc_generated_files/system/src/pins.c",
+                "config.mcc/mcc_generated_files/clc/src/clc1.c",
+                "config.mcc/mcc_generated_files/dma/src/dma1.c",
+                "config.mcc/mcc_generated_files/timer/src/tmr2.c"
+            ]
+        },
+        {
+            "name": "pro_files",
+            "files": [
+                {
+                    "include": "**/*",
+                    "exclude": "**/@(build|_build|out|cmake|.vscode)/**/*"
+                },
+                "config.mcc/mcc_generated_files/pwm/src/pwm1_16bit.c",
+                "config.mcc/mcc_generated_files/system/src/mvio/vddio2.c",
+                "config.mcc/mcc_generated_files/system/src/clock.c",
+                "config.mcc/mcc_generated_files/system/src/interrupt.c",
+                "config.mcc/mcc_generated_files/uart/src/uart2.c",
+                "config.mcc/mcc_generated_files/crc/src/crc.c",
+                "config.mcc/mcc_generated_files/clb/src/clb1.c",
+                "config.mcc/mcc_generated_files/clb/src/clbBitstream.S",
+                "config.mcc/mcc_generated_files/system/src/system.c",
+                "config.mcc/mcc_generated_files/system/src/config_bits.c",
+                "config.mcc/main.c",
+                "config.mcc/mcc_generated_files/system/src/pins.c",
+                "config.mcc/mcc_generated_files/clc/src/clc1.c",
+                "config.mcc/mcc_generated_files/timer/src/tmr2.c"
+            ]
+        }
+    ]
+}
