@@ -34,6 +34,7 @@ More details and code examples on the PIC18F56Q35 can be found at the following 
 - The [PIC18F56Q35 Curiosity Nano Development board](https://www.microchip.com/en-us/development-tool/EV55P36A?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_PIC18-Q35&utm_content=pic18f56q35-clb-single-wire-interface-mplab-mcc-github&utm_bu=MCU08) is used as a test platform:
 <br>
 <br><img src="images/pic16f56q35-cnano.png" width="600">
+
 - The [Curiosity Nano Explorer board](https://www.microchip.com/en-us/development-tool/EV58G97A?utm_source=GitHub&utm_medium=TextLink&utm_campaign=MCU8_PIC18-Q35&utm_content=pic18f56q35-clb-single-wire-interface-mplab-mcc-github&utm_bu=MCU08) is used as a test platform:
 <br>
 <br><img src="images/cnano-explorer.png" width="600">
@@ -132,6 +133,8 @@ TRISC3 and TRISC4 receive complementary enable conditions, like a demultiplexer 
 
 The following peripherals and clock configurations are set up using the VS CodeÂ® Code Configurator (MCC) Melody for the PIC18F56Q35:
 
+<br>
+
 1. Clock Control:
 <br>
 <br><img src="images/clock-control.png" width="600">
@@ -139,9 +142,13 @@ The following peripherals and clock configurations are set up using the VS CodeÂ
       - HF Internal Clock: 64_MHz
       - Clock Divider: 1
 
+<br>
+
 2. Configuration Bits:
 <br>
 <br><img src="images/config-bits.png" width="600">
+
+<br>
 
 3. CLB Synthesizer Library:
 <br>
@@ -152,9 +159,13 @@ The following peripherals and clock configurations are set up using the VS CodeÂ
       - Clock Divider: 4
       - CLB Configuration Options: CLB configured after reset (CLB configured by the firmware application)
 
+<br>
+
 4. CRC:
 <br>
 <br><img src="images/crc.png" width="600">  
+
+<br>
 
 5. Timer2:
 <br>
@@ -168,6 +179,8 @@ The following peripherals and clock configurations are set up using the VS CodeÂ
       - Postscaler 1:1
       - Requested Period: 3 us
 
+<br>
+
 6. PWM1:
 <br>
 <br><img src="images/pwm1.png" width="600">
@@ -179,11 +192,15 @@ The following peripherals and clock configurations are set up using the VS CodeÂ
       - Output1 Duty Cycle(%): 10
       - Output2 Duty Cycle(%): 50
 
+<br>
+
 7. CLC1:
 <br>
 <br><img src="images/clc1.png" width="600">
       - Enable CLC: Enabled
       - Logic Cell Mode bits: OR-XOR
+
+<br>
 
 8. UART2:
 <br>
@@ -192,7 +209,9 @@ The following peripherals and clock configurations are set up using the VS CodeÂ
       - Redirect STDIO to UART: Enabled
       - UART Dependency Selection: UART2
 
-9.  Pin Grid View:
+<br>
+
+9. Pin Grid View:
 <br>
 <br><img src="images/pins.png" width="1000">
 <br><img src="images/pin-grid-view.png" width="1000">
